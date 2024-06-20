@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "Task_name": "Problem sloving"
+    },
+    {
+        "id": 2,
+        "Task_name": "Dancing"
+    },
+    {
+        "id": 3,
+        "Task_name": "Reading Novel At night"
+    },
+    {
+        "id": 4,
+        "Task_name": "Improving Skill in Node JS"
+    },
+    {
+        "id": 5,
+        "Task_name": "Eating Food"
+    },
+    {
+        "id": 6,
+        "Task_name": "Walking 100 Steps "
+    },
+    {
+        "id": 7,
+        "Task_name": "Playing outdoor games"
+    },
+    {
+        "id": 8,
+        "Task_name": "Yoga Fitness"
+    },
+    {
+        "id": 9,
+        "Task_name": "Talking "
+    },
+    {
+        "id": 10,
+        "Task_name": "Socialized"
+    }
+]
