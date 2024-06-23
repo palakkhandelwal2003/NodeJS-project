@@ -2,14 +2,16 @@ import React, { useState } from 'react'
 import"./TodoList.css";//css import
 function TodoList(){
      
-
     const[inputValue,setInputValue]=useState("");
     //initial value empty h
+
     const[todos,setTodos]=useState([]);
     //variable jisme add krne se variable store hoga
+
         function handleInputChange(e){
             setInputValue(e.target.value);
         }
+        //for add
         const handleAddTodos=()=>{
             if(inputValue!==""){
                 const newTodo={
@@ -18,18 +20,19 @@ function TodoList(){
                 completed:false
                 };
                 
-
+            // console.log(newTodo);
 
 
                 //array of object having unique property
                 setTodos([...todos,newTodo]); 
-                //purana array+add new one task+sprea operator
+                //purana array+add new one task+spread operator
                 setInputValue("");
             
             }
         }
         const handleToggleChange=(id)=>{
             console.log(id);
+           
             const updatedTodos=todos.map((todo)=>{
             if(todo.id===id){
                 return{...todo,completed:!todo.completed}
@@ -40,12 +43,13 @@ function TodoList(){
             setTodos(updatedTodos);
         };
     //use id so unique element p check ho
+        //for delete
         const handleRemoveTodo=(id)=>{
             const filteredTodos=todos.filter((todo)=>todo.id!==id);
             console.log(filteredTodos);
             setTodos(filteredTodos);//to remove the element fron UI
         };
-    //for delete
+
     return (
       <div>
       <div className="todo-container">
@@ -59,7 +63,7 @@ function TodoList(){
       <ul className="todo-list">
         {todos.map((todo)=>(
          <li 
-         className={`todo-item ${todo.completed == true?"completed":""}`}>
+         className={`todo-item ${todo.completed ===true?"completed":""}`}>
           {/* //using ternary operator */}
           <input type="checkbox" onChange={()=>handleToggleChange(todo.id)}/>
           <span className="todo-text">{todo.text}</span>
